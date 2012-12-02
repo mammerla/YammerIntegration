@@ -1,0 +1,10 @@
+This is a set of sample code that can integrate with Yammer.
+
+Yammer/ contains a set of JsonDataContractSerializer-compatible definitions of 
+the JSON data structures returned or utilized by Yammer endpoints.
+
+WebForms/ contains some ASP.NET sample controls that do sample Yammer operations.  
+At present, these controls aren't really good enough to be used by themselves.
+
+WebForms/YammerWebFormContext.cs is an interesting file that contains some of the 
+basics of doing OAuth flow with Yammer.

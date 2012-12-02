@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{59E378D7-47C4-4AE7-99A6-0B2B317746E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mammerla.YammerIntegration</RootNamespace>
+    <AssemblyName>mammerla.YammerIntegration</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\BasicHelloWorld\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Script.Web">
+      <HintPath>..\BasicHelloWorld\packages\ScriptSharp.Lib.HTML.0.7.5.0\lib\Script.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="WebForms\ActivityPoster.cs" />
+    <Compile Include="WebForms\BasicAuthenticator.cs" />
+    <Compile Include="WebForms\MessageList.cs" />
+    <Compile Include="WebForms\YammerWebFormContext.cs" />
+    <Compile Include="Yammer\AccessToken.cs" />
+    <Compile Include="Yammer\ActivityUpdate.cs" />
+    <Compile Include="Yammer\Actor.cs" />
+    <Compile Include="Yammer\AuthenticationResponse.cs" />
+    <Compile Include="Yammer\Contact.cs" />
+    <Compile Include="Yammer\Activity.cs" />
+    <Compile Include="Yammer\EmailAddress.cs" />
+    <Compile Include="Yammer\Employment.cs" />
+    <Compile Include="Yammer\InstantMessage.cs" />
+    <Compile Include="Yammer\Message.cs" />
+    <Compile Include="Yammer\MessageBody.cs" />
+    <Compile Include="WebForms\MessagePoster.cs" />
+    <Compile Include="Yammer\MessageSet.cs" />
+    <Compile Include="Yammer\MessageThreading.cs" />
+    <Compile Include="Yammer\Network.cs" />
+    <Compile Include="Yammer\OpenGraphObject.cs" />
+    <Compile Include="Yammer\ProfileFields.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Yammer\School.cs" />
+    <Compile Include="Yammer\SenderType.cs" />
+    <Compile Include="Yammer\Stats.cs" />
+    <Compile Include="Yammer\User.cs" />
+    <Compile Include="Yammer\UserList.cs" />
+    <Compile Include="Yammer\YammerBaseContext.cs" />
+    <Compile Include="WebForms\YammerControl.cs" />
+    <Compile Include="Yammer\YammerEndPoint.cs" />
+    <Compile Include="Yammer\YammerObject.cs" />
+    <Compile Include="Yammer\YammerRequest.cs" />
+    <Compile Include="Yammer\YammerStandaloneContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServerIntegration\ServerIntegration.csproj">
+      <Project>{a87c2f55-639a-492c-bfaa-d8224bd2c3d3}</Project>
+      <Name>ServerIntegration</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
